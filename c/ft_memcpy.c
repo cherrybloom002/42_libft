@@ -6,18 +6,21 @@
 /*   By: ahodor <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/18 14:36:23 by ahodor            #+#    #+#             */
-/*   Updated: 2026/05/18 15:06:06 by ahodor           ###   ########.fr       */
+/*   Updated: 2026/05/19 10:07:28 by ahodor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
+	if (dest == NULL && src == NULL)
+		return (NULL);
 	while (i < n)
 	{
-		dest[i] = src[i];
+		*(unsigned char *)(dest + i) = *(unsigned char *)(src + i);
 		i++;
 	}
+	return (dest);
 }
