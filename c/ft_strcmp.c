@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahodor <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/18 14:23:11 by ahodor            #+#    #+#             */
-/*   Updated: 2026/05/18 15:04:34 by ahodor           ###   ########.fr       */
+/*   Created: 2026/05/21 10:33:01 by ahodor            #+#    #+#             */
+/*   Updated: 2026/05/21 10:33:03 by ahodor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_bzero(void *s, size_t n)
+int	ft_strcmp(const char *s1, const char *s2)
 {
-	size_t			i;
-	unsigned char	*p;
+	int	i;
 
 	i = 0;
-	p = (unsigned char *)s;
-	while (i < n)
+	while (s1[i] != '\0' || s2[i] != '\0')
 	{
-		p[i] = '\0';
+		if (s1[i] != s2[i])
+			return (s1[i] - s2[i]);
 		i++;
 	}
+	return (s1[i] - s2[i]);
 }

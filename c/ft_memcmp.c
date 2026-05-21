@@ -1,25 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahodor <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/18 14:23:11 by ahodor            #+#    #+#             */
-/*   Updated: 2026/05/18 15:04:34 by ahodor           ###   ########.fr       */
+/*   Created: 2026/05/21 11:28:51 by ahodor            #+#    #+#             */
+/*   Updated: 2026/05/21 11:28:54 by ahodor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_bzero(void *s, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	size_t			i;
-	unsigned char	*p;
+	size_t				i;
+	const unsigned char	*st1;
+	const unsigned char	*st2;
 
 	i = 0;
-	p = (unsigned char *)s;
-	while (i < n)
+	st1 = (const unsigned char *)s1;
+	st2 = (const unsigned char *)s2;
+	while ((i < n) && (st1[i] != '\0' || st2[i] != '\0'))
 	{
-		p[i] = '\0';
+		if (st1[i] != st2[i])
+			return (st1[i] - st2[i]);
 		i++;
 	}
+	return (st1[i] - st2[i]);
 }

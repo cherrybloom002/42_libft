@@ -1,25 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahodor <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/18 14:23:11 by ahodor            #+#    #+#             */
-/*   Updated: 2026/05/18 15:04:34 by ahodor           ###   ########.fr       */
+/*   Created: 2026/05/21 10:46:37 by ahodor            #+#    #+#             */
+/*   Updated: 2026/05/21 10:46:39 by ahodor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_bzero(void *s, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	size_t			i;
-	unsigned char	*p;
+	size_t				i;
+	const unsigned char	*p;
 
 	i = 0;
-	p = (unsigned char *)s;
+	p = (const unsigned char *)s;
 	while (i < n)
 	{
-		p[i] = '\0';
+		if (p[i] == c)
+			return ((void *)&p[i]);
 		i++;
 	}
+	return ('\0');
 }
