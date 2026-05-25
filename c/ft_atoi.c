@@ -10,8 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
+#include "libft.h"
 
 int	ft_atoi(const char *nptr)
 {
@@ -22,26 +21,18 @@ int	ft_atoi(const char *nptr)
 	i = 0;
 	r = 0;
 	sign = 1;
-	while (*nptr == '\t' || *nptr == '\n' || *nptr == '\v'
-		|| *nptr == '\f' || *nptr == '\r' || *nptr == ' ')
-		nptr++;
-	while (*nptr == '+' || *nptr == '-')
-		if (*(nptr++) == '-')
-			sign *= -1;
+	while (nptr[i] == '\t' || nptr[i] == '\n' || nptr[i] == '\v'
+		|| nptr[i] == '\f' || nptr[i] == '\r' || nptr[i] == ' ')
+		i++;
+	if (nptr[i] == '-')
+	{
+		sign *= -1;
+		i++;
+	}
 	while (nptr[i] >= '0' && nptr[i] <= '9')
 	{
 		r = r * 10 + (int)nptr[i] - '0';
 		i++;
 	}
 	return (r * sign);
-}
-
-int	main()
-{
-	int a = atoi("-+-- 2584gt");
-	int	ft = ft_atoi("-+-- 2584gt");
-
-	printf("Atoi: %d\n", a);
-	printf("ftAtoi: %d\n", ft);
-	return (0);
 }

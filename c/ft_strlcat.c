@@ -10,15 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-static	size_t	ft_strlen(const char *s)
-{
-	size_t	i;
-
-	i = 0;
-	while (s[i] != '\0')
-		i++;
-	return (i);
-}
+#include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
@@ -36,10 +28,10 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 		sum = s + size;
 	while (src[i] && size > (d + 1))
 	{
-		dest[d] = src[i];
+		dst[d] = src[i];
 		d++;
 		i++;
 	}
-	dest[d] = '\0';
+	dst[d] = '\0';
 	return (sum);
 }
