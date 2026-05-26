@@ -22,7 +22,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	i = 0;
 	d = ft_strlen(dst);
 	s = ft_strlen(src);
-	if (size > 0)
+	if (size > d)
 		sum = d + s;
 	else
 		sum = s + size;
