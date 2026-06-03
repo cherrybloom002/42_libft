@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ahodor <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: ahodor <ahodor@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/18 14:36:23 by ahodor            #+#    #+#             */
-/*   Updated: 2026/05/19 10:07:28 by ahodor           ###   ########.fr       */
+/*   Updated: 2026/06/03 15:26:04 by ahodor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,18 @@
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	size_t	i;
-
+	unsigned char *d;
+	unsigned char *s;
+	
 	i = 0;
 	if (dest == NULL && src == NULL)
 		return (NULL);
+	d = (unsigned char *)dest;
+	s = (unsigned char *)src;
 	while (i < n)
 	{
-		*(unsigned char *)(dest + i) = *(unsigned char *)(src + i);
+		d[i] = s[i];
 		i++;
 	}
-	return (dest);
+	return (d);
 }

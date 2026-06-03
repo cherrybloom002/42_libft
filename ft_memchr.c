@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ahodor <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: ahodor <ahodor@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/21 10:46:37 by ahodor            #+#    #+#             */
-/*   Updated: 2026/05/21 10:46:39 by ahodor           ###   ########.fr       */
+/*   Updated: 2026/06/03 15:27:55 by ahodor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	unsigned char		i;
 	const unsigned char	*p;
 
+	if (s == NULL)
+		return (NULL);
 	i = (unsigned char)c;
 	p = (const unsigned char *)s;
 	while (n > 0)
