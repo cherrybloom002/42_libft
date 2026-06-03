@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ahodor <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: ahodor <ahodor@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/18 14:23:11 by ahodor            #+#    #+#             */
-/*   Updated: 2026/05/18 15:04:34 by ahodor           ###   ########.fr       */
+/*   Updated: 2026/06/03 16:40:38 by ahodor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	ft_bzero(void *s, size_t n)
 	unsigned char	*p;
 
 	i = 0;
+	if(!s)
+		return (NULL);
 	p = (unsigned char *)s;
 	while (i < n)
 	{

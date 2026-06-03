@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ahodor <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: ahodor <ahodor@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/25 14:51:30 by ahodor            #+#    #+#             */
-/*   Updated: 2026/05/25 14:51:31 by ahodor           ###   ########.fr       */
+/*   Updated: 2026/06/03 16:46:20 by ahodor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ static char	**fill_array(char **array, char const *s, char c)
 {
 	size_t	i;
 	size_t	j;
-	size_t	world_len;
+	size_t	word_len;
 
 	i = 0;
 	j = 0;
@@ -54,14 +54,14 @@ static char	**fill_array(char **array, char const *s, char c)
 	{
 		if (s[i] != c)
 		{
-			world_len = 0;
-			while (s[i + world_len] && s[i + world_len] != c)
-				world_len++;
-			array[j] = ft_substr(s, i, world_len);
+			word_len = 0;
+			while (s[i + word_len] && s[i + word_len] != c)
+				word_len++;
+			array[j] = ft_substr(s, i, word_len);
 			if (!array[j])
 				return (free_array(array, j));
 			j++;
-			i += world_len;
+			i += word_len;
 		}
 		else
 			i++;

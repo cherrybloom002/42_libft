@@ -6,7 +6,7 @@
 /*   By: ahodor <ahodor@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/18 13:57:34 by ahodor            #+#    #+#             */
-/*   Updated: 2026/06/03 15:26:33 by ahodor           ###   ########.fr       */
+/*   Updated: 2026/06/03 16:43:23 by ahodor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_memset(void *s, int c, size_t n)
 	unsigned char	*p;
 
 	i = 0;
-	if (s == NULL)
+	if (!s)
 		return (NULL);
 	p = (unsigned char *)s;
 	while (i < n)

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ahodor <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: ahodor <ahodor@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/21 10:33:01 by ahodor            #+#    #+#             */
-/*   Updated: 2026/05/21 10:33:03 by ahodor           ###   ########.fr       */
+/*   Updated: 2026/06/03 16:52:38 by ahodor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,11 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	size_t			i;
 	unsigned char	*str1;
 	unsigned char	*str2;
-
+	
+	i = 0;
 	str1 = (unsigned char *)s1;
 	str2 = (unsigned char *)s2;
-	i = 0;
+	
 	if (n == 0)
 		return (0);
 	while (str1[i] && str2[i] && str1[i] == str2[i] && i < n - 1)
