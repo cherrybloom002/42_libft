@@ -6,7 +6,7 @@
 /*   By: ahodor <ahodor@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/18 14:36:23 by ahodor            #+#    #+#             */
-/*   Updated: 2026/06/04 11:58:36 by ahodor           ###   ########.fr       */
+/*   Updated: 2026/06/04 14:16:38 by ahodor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	unsigned char	*s;
 
 	i = 0;
-	if (!dest || !src)
+	if (!dest && !src)
 		return (NULL);
 	d = (unsigned char *)dest;
 	s = (unsigned char *)src;
