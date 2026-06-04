@@ -6,7 +6,7 @@
 /*   By: ahodor <ahodor@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/18 14:56:09 by ahodor            #+#    #+#             */
-/*   Updated: 2026/06/03 16:42:25 by ahodor           ###   ########.fr       */
+/*   Updated: 2026/06/04 11:59:00 by ahodor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	size_t			i;
 	unsigned char	*d;
 	unsigned char	*s;
-	
+
 	i = 0;
 	if (!dest || !src)
 		return (NULL);

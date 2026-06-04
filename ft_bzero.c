@@ -6,7 +6,7 @@
 /*   By: ahodor <ahodor@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/18 14:23:11 by ahodor            #+#    #+#             */
-/*   Updated: 2026/06/04 10:24:23 by ahodor           ###   ########.fr       */
+/*   Updated: 2026/06/04 11:59:32 by ahodor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_bzero(void *s, size_t n)
 	unsigned char	*p;
 
 	i = 0;
-	if(!s)
+	if (!s)
 		return ;
 	p = (unsigned char *)s;
 	while (i < n)
