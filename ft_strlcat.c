@@ -6,7 +6,7 @@
 /*   By: ahodor <ahodor@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/19 11:58:07 by ahodor            #+#    #+#             */
-/*   Updated: 2026/06/04 13:26:13 by ahodor           ###   ########.fr       */
+/*   Updated: 2026/06/04 14:08:43 by ahodor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 
 	i = 0;
 	if (!dst || !src)
-		return (NULL);
+		return (0);
 	d = ft_strlen(dst);
 	s = ft_strlen(src);
 	if (size > d)

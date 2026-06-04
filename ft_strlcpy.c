@@ -6,7 +6,7 @@
 /*   By: ahodor <ahodor@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/19 11:32:14 by ahodor            #+#    #+#             */
-/*   Updated: 2026/06/04 13:27:36 by ahodor           ###   ########.fr       */
+/*   Updated: 2026/06/04 14:09:14 by ahodor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 
 	i = 0;
 	if (!src || !dst)
-		return (NULL);
+		return (0);
 	src_len = ft_strlen(src);
 	if (size == 0)
 		return (src_len);
