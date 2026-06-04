@@ -6,7 +6,7 @@
 /*   By: ahodor <ahodor@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/26 11:19:37 by ahodor            #+#    #+#             */
-/*   Updated: 2026/06/03 16:45:49 by ahodor           ###   ########.fr       */
+/*   Updated: 2026/06/04 11:19:54 by ahodor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,13 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	while (*s)
+	int	i;
+
+	i = 0;
+	while (s[i] != '\0')
 	{
-		write(fd, s, 1);
-		s++;
+		ft_putchar_fd(s[i], fd);
+		i++;
 	}
 	write(fd, "\0", 1);
 }
